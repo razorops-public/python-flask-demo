@@ -25,7 +25,7 @@ Run following commands to execute the test suite -
 
 If you're new to Razorops, feel free to fork this repository and use it to [create a project](https://docs.razorops.com/getting_started/).
 
-`.razorops.yaml` contains the pipeline code to build and execute the tests for this project. To know more about how to write and customize, refer to the [documentation](https://docs.razorops.com). Here is the link of [the pipeline](https://dashboard.razorops.com/apps/delicate-sunset-2750/workflows) workflows page.
+`.razorops.yaml` contains the pipeline code to build and execute the tests for this project. To know more about how to write and customize, refer to the [documentation](https://docs.razorops.com). Here is the link of [the pipeline](https://dashboard.razorops.com/apps/bold-grass-9882/workflows) workflows page.
 
 ### Recommended links
 
