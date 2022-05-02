@@ -15,5 +15,5 @@ tasks:
         paths:
         # need to change based on default python version
         # Please check https://docs.razorops.com/pipeline/linux-vm/tools/#python
-        - ~/.pyenv/versions/3.9.9/lib/python3.7/site-packages
+        - ~/.pyenv/versions/3.9.9/lib/python3.9/site-packages
     - reports/junit: test-reports/*.xml
