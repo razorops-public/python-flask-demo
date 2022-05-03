@@ -2,6 +2,7 @@ version: v2
 
 tasks:
   build:
+    runner: razorci/python:3.9
     steps:
     - checkout
     - cache/pull: pip-deps-{{ checksum "requirements.txt" }}
@@ -13,7 +14,5 @@ tasks:
     - cache/push: 
         key: pip-deps-{{ checksum "requirements.txt" }}
         paths:
-        # need to change based on default python version
-        # Please check https://docs.razorops.com/pipeline/linux-vm/tools/#python
-        - ~/.pyenv/versions/3.9.9/lib/python3.9/site-packages
+        - /usr/local/lib/python3.9/site-packages
     - reports/junit: test-reports/*.xml
