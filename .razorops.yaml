@@ -11,6 +11,7 @@ tasks:
     - commands:
       - python test.py
 
+      - export PATH="$(python3 -m site --user-base)/bin:$PATH"
       # generate coverage reports
       - coverage run test.py
       - coverage report && coverage html
