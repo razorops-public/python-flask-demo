@@ -10,8 +10,14 @@ tasks:
       - pip install -r requirements.txt
     - commands:
       - python test.py
-    - cache/push: 
+
+      # generate coverage reports
+      - coverage run test.py
+      - coverage report && coverage html
+    - cache/push:
         key: pip-deps-{{ checksum "requirements.txt" }}
         paths:
         - /usr/local/lib/python3.9/site-packages
     - reports/junit: test-reports/*.xml
+    - reports/html: 
+        dir: htmlcov
