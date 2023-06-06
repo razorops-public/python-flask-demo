@@ -1,4 +1,4 @@
-## Razorops CI/CD pipeline demo with Python 
+## Razorops CI/CD pipeline demo with Python  
 
 If you have forked this repo, then connect with Razorops to create your demo pipeline by following the below button
 
