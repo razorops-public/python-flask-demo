@@ -1,6 +1,9 @@
+global:
+  runner:
+    os_image: ubuntu
 
 tasks:
-  build:
+  unit-tests:
     runner: razorci/python:3.9
     steps:
     - checkout
@@ -10,7 +13,6 @@ tasks:
       - pip install -r requirements.txt
     - commands:
       - python test.py
-
       - export PATH="$(python3 -m site --user-base)/bin:$PATH"
       # generate coverage reports
       - coverage run test.py
