@@ -39,6 +39,6 @@ If you're new to Razorops, feel free to fork this repository and use it to [crea
 
 ### License
 
-Copyright (c) 2021 Razorops LLC
+Copyright (c) 2024 Razorops LLC
 
 Distributed under the MIT License. See the file LICENSE.md.
