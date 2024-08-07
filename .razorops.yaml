@@ -1,7 +1,7 @@
 
 tasks:
   check-vulvs:
-    runner: razorci/python:3.19
+    runner: razorci/python:3.9
     steps:
     - checkout
     - commands: 
