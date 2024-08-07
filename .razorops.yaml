@@ -1,5 +1,14 @@
 
 tasks:
+  check-vulvs:
+    runner: razorci/python:3.9
+    steps:
+    - checkout
+    - commands: 
+      - export PATH="$(python3 -m site --user-base)/bin:$PATH"
+      - python3 -m pip install pip-audit
+      - pip-audit -r requirements.txt --aliases --desc -f json | python3 -m json.tool
+
   unit-tests:
     runner: razorci/python:3.9
     steps:
