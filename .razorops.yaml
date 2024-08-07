@@ -8,6 +8,9 @@ tasks:
       - export PATH="$(python3 -m site --user-base)/bin:$PATH"
       - python3 -m pip install pip-audit
       - pip-audit -r requirements.txt --aliases --desc -f json | python3 -m json.tool
+    - commands:
+      - pipenv sync
+      - pipenv check
 
   unit-tests:
     runner: razorci/python:3.9
