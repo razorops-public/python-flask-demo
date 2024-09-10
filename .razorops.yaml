@@ -4,10 +4,15 @@ tasks:
     runner: razorci/python:3.9
     steps:
     - checkout
+    ## use https://github.com/pypa/advisory-database for security vulnerabilities
     - commands: 
       - export PATH="$(python3 -m site --user-base)/bin:$PATH"
       - python3 -m pip install pip-audit
       - pip-audit -r requirements.txt --aliases --desc -f json | python3 -m json.tool
+    ### use pipenv inbuilt checks (PyUp Safety security vulnerabilities)
+    - commands:
+      - pipenv sync
+      - pipenv check -i 70612
 
   unit-tests:
     runner: razorci/python:3.9
