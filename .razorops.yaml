@@ -1,6 +1,6 @@
 
 tasks:
-  check-vulvs:
+  check-vulns:
     runner: razorci/python:3.9
     steps:
     - checkout
